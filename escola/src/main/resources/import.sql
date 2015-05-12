@@ -1,0 +1,7 @@
+INSERT INTO Member (id, name, email, phone_number) values (0, 'John Smith', 'john.smith@mailinator.com', '2125551212')
+INSERT INTO `tb_pessoa`(`id`, `cpf`, `nome`) VALUES (1001,99999999901,'Tania Moraes')
+INSERT INTO `tb_pessoa`(`id`, `cpf`, `nome`) VALUES (2002,99999999902,'Danilo Moraes')
+INSERT INTO `tb_pessoa`(`id`, `cpf`, `nome`) VALUES (3003,99999999903,'Bruno Cesar')
+INSERT INTO `tb_aluno`(`dataAniversario`, `matricula`, `id`) VALUES ('1988-07-18',11314491,3003)
+INSERT INTO `tb_aluno`(`dataAniversario`, `matricula`, `id`) VALUES ('1989-10-20',11312393,2002)
+INSERT INTO `tb_professor`(`salario`, `id`) VALUES (4.870,1001)
