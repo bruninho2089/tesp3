@@ -34,7 +34,7 @@
 				</rich:panel>
 			</h:form>
 		</h:panelGroup>
-		<rich:panel rendered="#{empty professormb.professor}"> 
+		<rich:panel rendered="#{empty professormb.professor}">>
 			<h:outputText value="Lista de Professor"
 				style="font-size:15px;font-weight:bold" />
 			<h:form id="arg">
@@ -49,6 +49,7 @@
 						<h:commandButton id="pesquisar" action="#{professormb.pesquisar}"
 							value="Pesquisar" render="tabela" />
 					</rich:toolbarGroup>
+
 				</rich:toolbar>
 			</h:form>
 			<h:panelGroup rendered="#{empty professormb.professores}">

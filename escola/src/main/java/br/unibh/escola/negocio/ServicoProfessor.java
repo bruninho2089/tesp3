@@ -8,8 +8,8 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
+import br.unibh.escola.entidades.Disciplina;
 import br.unibh.escola.entidades.Professor;
-import br.unibh.escola.entidades.Sala;
 
 @Stateless
 @LocalBean
@@ -48,20 +48,26 @@ public class ServicoProfessor implements DAO<Professor, Long> {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Professor> findAll() throws Exception {
-		log.info("Encontrando todos os Professores");
+		log.info("Encontrando todos os Professors");
 		return em.createQuery("from Professor").getResultList();
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Professor> findByName(String name) throws Exception {
-		log.info("Encontrando Professores " + name);
+		log.info("Encontrando Professors " + name);
 		return em.createNamedQuery("Professor.findByName")
 				.setParameter("nome", name + "%").getResultList();
 	}
+	
+	@Override
+	public List<Professor> findByCapacidade(int capacidade) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
-	public List<Sala> findByCapacidade(int capacidade) throws Exception {
+	public List<Disciplina> findByNomeECurso(String nome, String curso) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -9,6 +9,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.swing.text.StyledEditorKit.BoldAction;
 
 import br.unibh.escola.entidades.Sala;
 import br.unibh.escola.negocio.ServicoSala;
@@ -112,6 +113,30 @@ public class ControleSala {
 			e.printStackTrace();
 		}
 		sala = null;
-	
-}
+	}
+
+	public String getBooleanString(boolean s) {
+		return s ? "Sim" : "Não";
+	}
+
+	public String getStatusString(int s) {
+		String result;
+
+		switch (s) {
+		case 1:
+			result = "Ativo";
+			break;
+		case 2:
+			result = "Em Manutenção";
+			break;
+		case 3:
+			result = "Desativado";
+			break;
+		default:
+			result = "";
+			break;
+		}
+
+		return result;
+	}
 }

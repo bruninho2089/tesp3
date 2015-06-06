@@ -9,11 +9,11 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 import br.unibh.escola.entidades.Aluno;
-import br.unibh.escola.entidades.Sala;
+import br.unibh.escola.entidades.Disciplina;
 
-@Stateless
-@LocalBean
-public class ServicoAluno implements DAO<Aluno, Long> {
+	@Stateless
+	@LocalBean
+	public class ServicoAluno implements DAO<Aluno, Long> {
 	@Inject
 	EntityManager em;
 	@Inject
@@ -61,7 +61,13 @@ public class ServicoAluno implements DAO<Aluno, Long> {
 	}
 
 	@Override
-	public List<Sala> findByCapacidade(int capacidade) throws Exception {
+	public List<Aluno> findByCapacidade(int capacidade) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Disciplina> findByNomeECurso(String nome, String curso) {
 		// TODO Auto-generated method stub
 		return null;
 	}
